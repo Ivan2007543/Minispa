@@ -36,7 +36,7 @@ function App() {
         setError('');           // Limpieza: Resetea errores previos
 
         // Petición HTTP asíncrona: Detiene esta función en segundo plano, pero NO congela la interfaz
-        const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=10');
+        const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=151');
         
         // Control de errores de red: Si el estado HTTP no es 2xx, fuerza la caída al bloque 'catch'
         if (!response.ok) throw new Error('Error al cargar la lista');
@@ -101,7 +101,7 @@ function App() {
             <div className="w-3 h-3 rounded-full bg-green-500"></div>
           </div>
           <h1 className="text-xl font-bold text-white uppercase tracking-wider">
-            Pokédex Escolar
+            Pokédex 
           </h1>
         </header>
 
