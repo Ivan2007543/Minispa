@@ -216,20 +216,6 @@ function App() {
                   </div>
                 </div>
 
-                {/* MÉTRICAS FÍSICAS (Cálculo Aritmético Lógico) */}
-                <div className="w-full max-w-sm grid grid-cols-2 gap-2 mt-3 font-mono text-xs">
-                  <div className="bg-white border border-slate-300 p-2 rounded text-center">
-                    <span className="text-slate-400 block font-bold">ALTURA</span>
-                    {/* Operación lógica: La API devuelve el valor en decímetros; dividimos entre 10 para expresarlo en metros */}
-                    <span className="font-bold text-slate-700">{selectedPokemon.height / 10} m</span>
-                  </div>
-                  <div className="bg-white border border-slate-300 p-2 rounded text-center">
-                    <span className="text-slate-400 block font-bold">PESO</span>
-                    {/* Operación lógica: La API devuelve el valor en hectogramos; dividimos entre 10 para expresarlo en kilogramos */}
-                    <span className="font-bold text-slate-700">{selectedPokemon.weight / 10} kg</span>
-                  </div>
-                </div>
-
               </div>
             )}
           </section>
