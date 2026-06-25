@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
 
 function App() {
-  // ==========================================
-  // --- ESTADOS (Control de Memoria y Flujo) ---
-  // ==========================================
 
-  // 1. Almacena la lista inicial de los 10 Pokémon (Array de objetos con 'name' y 'url').
+  // ESTADOS (Control de Memoria y Flujo)
+
+  // 1. Almacena la lista inicial de los 151 Pokémon (Array de objetos con 'name' y 'url').
   // Inicializa vacío ([]) porque la respuesta de la API no es instantánea.
   const [pokemonList, setPokemonList] = useState([]);
 
@@ -25,9 +24,7 @@ function App() {
   // captura el error para evitar un "crash" de la aplicación (pantalla en blanco).
   const [error, setError] = useState('');
 
-  // ==========================================
-  // --- COMPORTAMIENTO 1: Fase de Montaje ---
-  // ==========================================
+  // COMPORTAMIENTO 1: Fase de Montaje 
   useEffect(() => {
     // Se declara una función asíncrona interna para poder usar la sintaxis imperativa 'async/await'
     const fetchInitialList = async () => {
@@ -57,13 +54,10 @@ function App() {
 
     fetchInitialList(); // Invocación inmediata de la función asíncrona recién declarada
 
-  }, []); // LÓGICA CRUCIAL: El array de dependencias vacío `[]` restringe la ejecución a una Sola Vez.
-          // Pertenece estrictamente a la fase de MONTAJE (Mounting) del ciclo de vida.
+  }, []); 
 
-  // ==========================================
-  // --- COMPORTAMIENTO 2: Guiado por Evento ---
-  // ==========================================
-  // NOTA LÓGICA: No es un useEffect porque NO debe ejecutarse automáticamente.
+  // COMPORTAMIENTO 2: Guiado por Evento
+
   // Responde única y exclusivamente a una interacción directa del usuario (Manejador de Eventos).
   const fetchPokemonDetail = async (name) => {
     try {
@@ -83,9 +77,8 @@ function App() {
     }
   };
 
-  // ==========================================
-  // --- INTERFAZ (Renderizado Condicional) ---
-  // ==========================================
+  // INTERFAZ (Renderizado Condicional) 
+  
   return (
     <main className="min-h-screen bg-slate-900 p-6 flex items-center justify-center font-sans">
       
