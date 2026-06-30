@@ -54,9 +54,6 @@ function App() {
           <h1 className="text-xl font-medium tracking-tight text-neutral-900">
             Pokédex <span className="text-neutral-400 font-normal text-sm ml-1">v1.0 (Kanto)</span>
           </h1>
-          <p className="text-xs text-neutral-500">
-            Proyecto escolar de consumo de APIs asíncronas con React y Tailwind.
-          </p>
         </header>
 
         {error && (
@@ -161,9 +158,6 @@ function App() {
 
         </div>
         
-        <footer className="text-center text-[10px] text-neutral-400 font-mono mt-4">
-          Hecho con ☕ — Interfaz de Usuario II
-        </footer>
       </div>
     </main>
   );
